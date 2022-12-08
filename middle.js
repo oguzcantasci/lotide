@@ -3,7 +3,7 @@ const middle = function(array) {
   let middleIndex;
   
   if (array.length < 3) {
-    result = [];
+    return [];
   } else if (array.length % 2 !== 0) {
     middleIndex = Math.floor(array.length / 2);
     result.push(array[middleIndex]);
@@ -14,4 +14,4 @@ const middle = function(array) {
   return result;
 };
 
-console.log(middle(["hede", "hodo", "falan", "filan"]));
+module.exports = middle;
