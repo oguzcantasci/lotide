@@ -11,18 +11,18 @@ const cd2 = { c: "1", d: ["light", "house", 4] };
 
 describe("#eqObjects", () => {
   it("should return true for eqObjects(ab === ba)", () => {
-    assert.deepEqual(eqObjects(ab, ba), true);
+    assert.strictEqual(eqObjects(ab, ba), true);
   });
 
   it("should return false for eqObjects(ab === abc)", () => {
-    assert.deepEqual(eqObjects(ab, abc), false);
+    assert.strictEqual(eqObjects(ab, abc), false);
   });
 
   it("should return true for eqObjects(cd === dc)", () => {
-    assert.deepEqual(eqObjects(cd, dc), true);
+    assert.strictEqual(eqObjects(cd, dc), true);
   });
-  
+
   it("should return false for eqObjects(dc === cd2)", () => {
-    assert.deepEqual(eqObjects(dc, cd2), false);
+    assert.strictEqual(eqObjects(dc, cd2), false);
   });
 });
