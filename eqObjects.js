@@ -1,21 +1,4 @@
-const eqArrays = function(array1, array2) {
-  let eqStatus;
-  if (array1.length === array2.length) {
-    for (let i = 0; i < array1.length; i++) {
-      if (array1[i] === array2[i]) {
-        eqStatus = true;
-        // console.log("esit");
-      } else {
-        // console.log("olmadi");
-        eqStatus = false;
-        break;
-      }
-    }
-  } else {
-    eqStatus = false;
-  }
-  return eqStatus;
-};
+const eqArrays = require('./eqArrays');
 
 const eqObjects = function(obj1, obj2) {
   const keyNames1 = Object.keys(obj1);
@@ -43,3 +26,5 @@ const eqObjects = function(obj1, obj2) {
   }
   return result;
 };
+
+module.exports = eqObjects;

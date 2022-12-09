@@ -9,3 +9,5 @@ const findKeyByValue = function(obj, value) {
   console.log(result);
   return result;
 };
+
+module.exports = findKeyByValue;

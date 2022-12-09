@@ -9,3 +9,5 @@ const findKey = function(obj, cb) {
   }
   return resultKey;
 };
+
+module.exports = findKey;

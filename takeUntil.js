@@ -5,3 +5,5 @@ const takeUntil = function(array, cb) {
   }
   return results;
 };
+
+module.exports = takeUntil;
