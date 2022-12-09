@@ -1,22 +1,42 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-// Test Case 1: Check the returned array elements
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2); // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs"); // ensure second element is "Labs"
-
-// Test Case: Check the original array
+const testArray = ["Hello", "Lighthouse", "Labs"];
+const result = tail(testArray);
 const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
-
-// Test Case: An array with only one element should yield an empty array for its tail
+tail(words);
 const oneElement = ["meeeh"];
-assertEqual(tail(oneElement).length, 0);
-
-
-// Test Case: An empty array should yield an empty array for its tail
 const emptyArray = [];
-assertEqual(tail(emptyArray).length, 0);
+
+
+//TEST CODE
+
+describe("The tail() function", () => {
+  it('should work as expected with arrays that have at least two elements', () => {
+    assert.deepEqual(tail(testArray), ["Lighthouse", "Labs"]);
+  });
+
+  it('should return a correct number of elements', () => {
+    assert.strictEqual(result.length, 2);
+  });
+
+  it('should return \'Lighthouse\' as the first element', () => {
+    assert.strictEqual(result[0], 'Lighthouse');
+  });
+
+  it('should return \'Labs\' as the first element', () => {
+    assert.strictEqual(result[1], 'Labs');
+  });
+
+  it("should not change the original array", () => {
+    assert.strictEqual(words.length, 3);
+  });
+
+  it('should return an empty array for the tail of an arrray with only one element', () => {
+    assert.deepEqual(tail(oneElement), []);
+  });
+
+  it('should return an empty array for the tail of an empty array', () => {
+    assert.deepEqual(tail(emptyArray), []);
+  });
+});
