@@ -11,5 +11,3 @@ const flatten = function(array) {
   }
   return flattenedArray;
 };
-
-console.log(flatten(["am", "got", ["meme", "yarrak"], ["sikis", "sokus"]])); // => [1, 2, 3, 4, 5, 6]
