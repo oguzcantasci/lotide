@@ -6,7 +6,6 @@ const findKeyByValue = function(obj, value) {
       result = key;
     }
   }
-  console.log(result);
   return result;
 };
 
