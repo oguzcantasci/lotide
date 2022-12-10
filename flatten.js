@@ -1,15 +1,14 @@
-const flatten = function(array) {
-  let flattenedArray = [];
-  for (let i = 0; i < array.length; i++) {
-    if (Array.isArray(array[i])) {
-      for (let x = 0; x < array[i].length; x++) {
-        flattenedArray.push(array[i][x]);
-      }
+const flatten = function(arr) {
+  let flattened = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      let cbArray = flatten(arr[i]);
+      flattened = flattened.concat(cbArray);
     } else {
-      flattenedArray.push(array[i]);
+      flattened.push(arr[i]);
     }
   }
-  return flattenedArray;
+  return flattened;
 };
 
 module.exports = flatten;
