@@ -1,18 +1,18 @@
 const without = function(source, itemsToRemove) {
-  let cleanArray = [];
-  let trigger;
+  let removalStatus;
+  let result = [];
   for (let i = 0; i < source.length; i++) {
-    trigger = true;
-    for (let x = 0; x < itemsToRemove.length && trigger; x++) {
-      if (source[i] === itemsToRemove[x]) {
-        trigger = false;
+    removalStatus = false;
+    for (let item of itemsToRemove) {
+      if (source[i] === item) {
+        removalStatus = true;
       }
     }
-    if (trigger) {
-      cleanArray.push(source[i]);
+    if (!removalStatus) {
+      result.push(source[i]);
     }
   }
-  return cleanArray;
+  return result;
 };
 
 module.exports = without;
