@@ -1,5 +1,5 @@
 const findKey = function(obj, cb) {
-  let resultKey = "asdasd";
+  let resultKey;
   let keys = Object.keys(obj);
   for (let i = 0; i < keys.length; i++) {
     if (cb(obj[keys[i]])) {
