@@ -1,7 +1,14 @@
 const takeUntil = function(array, cb) {
   let results = [];
-  for (let i = 0; !cb(array[i]); i++) {
-    results.push(array[i]);
+
+  //Looping through the given array, pushing the iterated element to the results if it returns false for the callback function
+  for (let i = 0; i < array.length; i++) {
+    if (!cb(array[i])) {
+      console.log(array[i]);
+      results.push(array[i]);
+    } else {
+      break;
+    }
   }
   return results;
 };
