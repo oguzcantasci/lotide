@@ -7,7 +7,7 @@ const takeUntil = function(array, cb) {
       console.log(array[i]);
       results.push(array[i]);
     } else {
-      break;
+      break; //break the loop when the callback returns true
     }
   }
   return results;
