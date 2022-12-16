@@ -1,3 +1,7 @@
+// Function Implementation
+// countLetter() function that takes in a string as an arg
+// and returns an object that contain the count of each character of the string as key-value pairs
+
 const countLetters = function(sentence) {
   let results = {};
   const letters = sentence.replaceAll(" ", "").toLowerCase();

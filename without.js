@@ -1,3 +1,7 @@
+// Function Implementation
+// without() function that takes a source array and an itemsToRemove array as args
+// and returns a portion of the source array with the items of itemsToRemove array removed/
+
 const without = function(source, itemsToRemove) {
   let removalStatus;
   let result = [];

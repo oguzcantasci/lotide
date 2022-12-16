@@ -1,3 +1,7 @@
+// Function Implementation
+// countOnly() function that takes in an array and an object as args
+// and returns the count of items in the array as specified in the object
+
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
   for (const item of allItems) {
@@ -9,7 +13,6 @@ const countOnly = function(allItems, itemsToCount) {
       }
     }
   }
-    
   return results;
 };
 
